@@ -8,8 +8,9 @@
     <title>Strawberry</title>
     <style>
         body {
-            font-family: Lato,sans-serif;
+            font-family: Lato, sans-serif;
         }
+
         #top-cont {
             width: 100%;
             height: 100px;
@@ -60,93 +61,114 @@
             margin-top: 8%;
             color: #b53788;
         }
+
         .menu-cont {
             background-color: #623381;
             padding: 10px;
             text-align: center;
         }
-        .button > a {
+
+        .button>a {
             color: white;
             padding: 10px;
             font-size: 13px;
             font-weight: bold;
-            font-family: Lato,sans-serif;
         }
-        .btn-hover > a:hover{
+
+        .btn-hover>a:hover {
             background-color: white;
             color: #623381;
         }
+
         .dailySpecial {
             margin-top: 1%;
             margin-bottom: 2%;
         }
+
         .special-title {
             padding: 1%;
         }
-        .special-title > div{
+
+        .special-title>div {
             display: inline-block;
             font-size: 20px;
             letter-spacing: 6px;
             color: #2b2b2b;
         }
-        .special-title > .line {
+
+        .special-title>.line {
             width: 35%;
             height: 5px;
             background-color: black;
             margin-bottom: 8px;
         }
+
         .special-item {
             display: flex;
             gap: 4%;
             margin-left: 6%;
         }
-        .special-item > div{
+
+        .special-item>div {
             /* border: 1px solid red; */
             width: 20%;
         }
-        .special-item  img {
+
+        .special-item img {
             width: 100%;
         }
+
         .special-item p {
             font-size: 12px;
             color: #2b2b2b;
             line-height: 1.2;
         }
+
         .special-item .special-offer {
             color: red;
         }
+
         .s_item_data {
             height: 15%;
         }
-        .best-deals .s_item_data {
-            height: 20%;
-        }
+
         .s_btn {
             text-align: center;
         }
-        .best-deals {
-            background-color: #ebe5f1;
-            /* margin-bottom: 6%; */
-        }
-        .best-deals .special-title > div{
+
+        .best-deals .special-title>div {
             color: #623381;
 
         }
-        .best-deals .special-title > .line{
+
+        .best-deals .special-title>.line {
             background-color: #623381;
             width: 38%;
         }
-        .best-deals .special-item > div{
-            border: 5px solid red;
+
+        .best-deals .special-item>div {
+            background-image: linear-gradient(#662d91, #e2195c), linear-gradient(#662d91, #e2195c);
+            padding: 8px;
+
+        }
+
+        .best-deals .special-item .s_body {
             background-color: white;
-            margin-bottom: 50px;
             padding: 10px;
+            height: 96%;
+        }
+
+        .best-deals {
+            margin-bottom: 8%;
+            background-color: #ebe5f1;
             
         }
+
         .best-deals .special-item {
             margin: 0 6%;
         }
-        .s_btn > button{
+
+        .s_btn>button {
             background-color: #00a69c;
             border: none;
             border-radius: 5%;
@@ -154,11 +176,22 @@
             color: white;
             font-weight: bold;
         }
-        .s_btn > h5{
+
+        .s_btn>h5 {
             color: #ee2c72;
         }
+
         .price-cont {
             line-height: 0px;
+        }
+
+        .special-item a {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .special-item a svg:hover {
+            fill: red;
         }
     </style>
 </head>
@@ -193,11 +226,20 @@
     <div class="dailySpecial">
         <div class="special-title">
             <div class="line"></div>
-            <div><h2> DAILY SPECIALS</h2></div>
+            <div>
+                <h2> DAILY SPECIALS</h2>
+            </div>
             <div class="line"></div>
         </div>
         <div class="special-item">
-            <div><img src="https://a.cdnsbn.com/images/products/250/26113321339.jpg" alt="item-image">
+            <div>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                        class="bi bi-heart" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                    </svg>
+                </a>
+                <img src="https://a.cdnsbn.com/images/products/250/26113321339.jpg" alt="item-image">
                 <div class="s_item_data">
                     <h4>Academie</h4>
                     <p>Phyto-Peeling With Seaweed (Salon Size) 200ml/6.75oz</p>
@@ -213,7 +255,14 @@
                 </div>
 
             </div>
-            <div><img src="https://a.cdnsbn.com/images/products/250/16991730439.jpg" alt="item-image">
+            <div>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                        class="bi bi-heart" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                    </svg>
+                </a>
+                <img src="https://a.cdnsbn.com/images/products/250/16991730439.jpg" alt="item-image">
                 <div class="s_item_data">
                     <h4>Bioelements</h4>
                     <p>His Perfect Shave 118ml/4oz</p>
@@ -228,7 +277,14 @@
                     <h5>Extra 8% Off</h5>
                 </div>
             </div>
-            <div><img src="https://a.cdnsbn.com/images/products/250/21914280737.jpg" alt="item-image">
+            <div>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                        class="bi bi-heart" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                    </svg>
+                </a>
+                <img src="https://a.cdnsbn.com/images/products/250/21914280737.jpg" alt="item-image">
                 <div class="s_item_data">
                     <h4>Guerlain</h4>
                     <p>La Patite Robe Noire Eau Fraiche Eau De Toilette Spray 100ml/3.3oz</p>
@@ -243,7 +299,14 @@
                     <h5>Extra 8% Off</h5>
                 </div>
             </div>
-            <div><img src="https://a.cdnsbn.com/images/products/250/15579440137.jpg" alt="item-image">
+            <div>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                        class="bi bi-heart" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                    </svg>
+                </a>
+                <img src="https://a.cdnsbn.com/images/products/250/15579440137.jpg" alt="item-image">
                 <div class="s_item_data">
                     <h4>Hermes</h4>
                     <p>Terre D'Hermes Eau De Toilette Spray 100ml/3.4oz</p>
@@ -263,63 +326,108 @@
     <div class="best-deals">
         <div class="special-title">
             <div class="line"></div>
-            <div><h2>BEST DEALS</h2></div>
+            <div>
+                <h2>BEST DEALS</h2>
+            </div>
             <div class="line"></div>
         </div>
         <div class="special-item">
-            <div><img src="https://a.cdnsbn.com/images/products/250/08068774303.jpg" alt="item-image">
-                <div class="s_item_data">
-                    <h4>Aveda</h4>
-                    <p>Rosemary Mint Hand & Body Wash 1000ml</p>
-                </div>
-                <div class="price-cont">
-                    <h2>Rs. 5,686.50</h2>
-                </div>
-                <div class="s_btn">
-                    <button>Add to bag</button>
-                    <h5>Extra 8% Off</h5>
-                </div>
-
-            </div>
-            <div><img src="https://a.cdnsbn.com/images/products/250/15103634305.jpg" alt="item-image">
-                <div class="s_item_data">
-                    <h4>Hugo Boss</h4>
-                    <p>Hugo Eau De Toilette Spray 200ml/6.7oz</p>
-                    <p class="special-offer">SAVE 21%</p>
-                </div>
-                <div class="price-cont">
-                    <h2>Rs. 5,994.00</h2>
-                    <p>RRP Rs.7,607.50</p>
-                </div>
-                <div class="s_btn">
-                    <button>Add to bag</button>
-                    <h5>Extra 8% Off</h5>
+            <div>
+                <div class="s_body">
+                    <div>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                                class="bi bi-heart" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                            </svg>
+                        </a>
+                        <img src="https://a.cdnsbn.com/images/products/250/08068774303.jpg" alt="item-image">
+                        <div class="s_item_data" id="new">
+                            <h4>Aveda</h4>
+                            <p>Rosemary Mint Hand & Body Wash 1000ml</p>
+                        </div>
+                        <div class="price-cont">
+                            <h2>Rs. 5,686.50</h2>
+                        </div>
+                        <div class="s_btn">
+                            <button>Add to bag</button>
+                            <h5>Extra 8% Off</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div><img src="https://a.cdnsbn.com/images/products/250/15009824805.jpg" alt="item-image">
-                <div class="s_item_data">
-                    <h4>Prada</h4>
-                    <p>Luna Rossa Eau De Toilette Spray 150ml/5oz</p>
-                </div>
-                <div class="price-cont">
-                    <h2>Rs. 8,145.50</h2>
-                </div>
-                <div class="s_btn">
-                    <button>Add to bag</button>
-                    <h5>Extra 8% Off</h5>
+            <div>
+                <div class="s_body">
+                    <div>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                                class="bi bi-heart" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                            </svg>
+                        </a>
+                        <img src="https://a.cdnsbn.com/images/products/250/15103634305.jpg" alt="item-image">
+                        <div class="s_item_data">
+                            <h4>Hugo Boss</h4>
+                            <p>Hugo Eau De Toilette Spray 200ml/6.7oz</p>
+                            <p class="special-offer">SAVE 21%</p>
+                        </div>
+                        <div class="price-cont">
+                            <h2>Rs. 5,994.00</h2>
+                            <p>RRP Rs.7,607.50</p>
+                        </div>
+                        <div class="s_btn">
+                            <button>Add to bag</button>
+                            <h5>Extra 8% Off</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div><img src="https://a.cdnsbn.com/images/products/250/10296391721.jpg" alt="item-image">
-                <div class="s_item_data">
-                    <h4>The Art Of Shaving</h4>
-                    <p>Shaving Cream - Dandalwood Essential Oil 150ml/5oz</p>
+            <div>
+                <div class="s_body">
+                    <div>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                                class="bi bi-heart" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                            </svg>
+                        </a>
+                        <img src="https://a.cdnsbn.com/images/products/250/15009824805.jpg" alt="item-image">
+                        <div class="s_item_data">
+                            <h4>Prada</h4>
+                            <p>Luna Rossa Eau De Toilette Spray 150ml/5oz</p>
+                        </div>
+                        <div class="price-cont">
+                            <h2>Rs. 8,145.50</h2>
+                        </div>
+                        <div class="s_btn">
+                            <button>Add to bag</button>
+                            <h5>Extra 8% Off</h5>
+                        </div>
+                    </div>
                 </div>
-                <div  class="price-cont">
-                    <h2>Rs. 2,190.00</h2>
-                </div>
-                <div class="s_btn">
-                    <button>Add to bag</button>
-                    <h5>Extra 8% Off</h5>
+            </div>
+            <div>
+                <div class="s_body">
+                    <div>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                                class="bi bi-heart" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                            </svg>
+                        </a>
+                        <img src="https://a.cdnsbn.com/images/products/250/10296391721.jpg" alt="item-image">
+                        <div class="s_item_data">
+                            <h4>The Art Of Shaving</h4>
+                            <p>Shaving Cream - Dandalwood Essential Oil 150ml/5oz</p>
+                        </div>
+                        <div class="price-cont">
+                            <h2>Rs. 2,190.00</h2>
+                        </div>
+                        <div class="s_btn">
+                            <button>Add to bag</button>
+                            <h5>Extra 8% Off</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
