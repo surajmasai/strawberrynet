@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 80%;
+            margin: auto;
+            background-color: rgb(235, 228, 228);
+        }
+#grid{
+    display: grid;
+    gap: 5%;
+    grid-template: 'top right'
+                      'left right'   ;
+
+}
+/* div>div{
+    border: 1px solid red;
+    
+} */
+div >div:nth-child(1){
+    grid-area: top;
+    height: 80px;
+    width: 700px;
+    background-color: white;
+    
+}
+div >div:nth-child(2){
+    grid-area: left;
+    width: 700px;
+    background-color: white;
+}
+div >div:nth-child(3){
+    grid-area: right;
+    height: 300px;
+    width: 350px;
+    background-color: white;
+}
+#shipingbar{
+    width: 600px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 5px;
+}
+#data {
+    float: left;
+}
+#name {
+    float: right;
+}
+#price{
+    float: right;
+    margin-left: 250px
+}
+#qty{
+    float: right;
+    margin-left: 200px
+}
+
+#shipingbar>div{
+    width: 40%;
+    height: 10px;
+    background-color: hotpink;
+    
+}
+h2{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#anker {
+    border: 1px solid black;
+    font-size: 30px;
+    margin-left: 80px;
+    background-color: purple;
+    color: white;
+    padding: 15px;
+   
+
+}
+.close{
+    margin-top: 0px;
+    float: right;
+}
+    </style>
+</head>
+<body>
+    <h1>Shoping Bag</h1>
+    <div id="grid">
+        <div>
+        <h1 style="margin-left: 10px;">Deliver To: <a href="">India</a> </h1>
+        </div>
+
+
+        <div>
+           <a class="close" href="">X</a>
+       <p style="margin-left: 10px;">Spend INR4,433.70 more for a reduced standard shipping fee at INR384.20.​</p>
+       <div style="margin-left: 10px;" id="shipingbar"><div></div></div>
+<p style="margin-left: 10px;">INR768.40 delivery fee for order below INR7,684.00.​ Free standard shipping for order above INR11,526.00.</p>
+<p style="margin-left: 10px;">Goods shipped from Strawberrynet</p>
+<hr/>
+        <div id="data"><img src="https://a.cdnsbn.com/images/products/msn/16505835537.jpg"/>
+             <p id="price">price</p>
+             <p id="qty">qty</p>
+             <p id="name">Name</p>
+             <hr/>
+             <p style="margin-left: 10px;">Item Total: 1 item(s)‎:</p>
+             <p style="margin-left: 10px;">Standard Shipping (Signature):</p>
+             <p style="margin-left: 10px;">Freight Surcharge </p>
+             <hr/>
+             <h1 style="margin-left: 10px;">Order Total:</h1>
+             <hr/>
+          <ul>
+              <h2>Notification</h2>
+              <li>Due to recent flight scheduling changes, orders may experience delivery delays.</li>
+              <li>Due to current situation, a 3.5% freight surcharge will be applied to your order</li>
+              <li>Please note that delivery to your selected region will be delayed because order dispatches are on hold due to shipping restrictions. For more information, please contact info@strawberrynet.com.</li>
+              <li>This order may be subject to duties and taxes, which are payable by the customer and are not refundable.</li>
+          </ul>
+        
+        </div>
+        </div>
+       <div>
+         <h2>Checkout as Ravi?</h2>
+         <a id="anker" href="checkout.html">CHECKOUT</a>
+       </div>
+    </div>
+</body>
+</html>
+<script>
+
+
+
+</script>
