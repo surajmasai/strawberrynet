@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Here?</title>
+    <style>
+      .rectangle {
+        width: 350px;
+        height: 600px;
+        /* border: 2px solid red; */
+        margin: auto;
+        background-color: whitesmoke;
+      }
+      .button {
+        text-align: center;
+        margin-top: 5px;
+      }
+      .button > button {
+        width: 150px;
+        height: 40px;
+        border: none;
+      }
+      .input > input {
+        width: 300px;
+        height: 30px;
+        margin-top: 10px;
+        margin-left: 20px;
+        border: 1px solid #633a81;
+      }
+      .input > p {
+        font-size: 16px;
+        margin-left: 20px;
+      }
+      .checkbox > input {
+        margin-left: 20px;
+        width: 30px;
+        height: 20px;
+      }
+      .checkbox > label {
+        margin-left: 5px;
+        font-size: 16px;
+      }
+      .submit > button {
+        margin-top: 30%;
+        margin-bottom: 5px;
+        margin-left: 16%;
+        width: 230px;
+        height: 40px;
+        border: none;
+        background-color: #633a81;
+        color: white;
+        font-size: 30px;
+      }
+      .submit > button:hover {
+        cursor: pointer;
+        color: black;
+        background-color: blanchedalmond;
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rectangle">
+      <div class="button">
+        <button>Sign In</button>
+        <button>New Here?</button>
+      </div>
+      <hr />
+      <div class="input">
+        <input type="text" placeholder="FirstName" /><br />
+        <input type="text" placeholder="LastName" /><br />
+        <input type="text" placeholder="Email address" /><br />
+        <input type="text" placeholder="Password" /><br />
+        <p>
+          Please enter a minimum of 8 characters,including at least 1 letter and
+          1 number
+        </p>
+        <input type="text" placeholder="Re-enter your Password" />
+        <p>
+          By creating your account,you agree to our privacy & Terms & conditions
+        </p>
+      </div>
+      <div class="checkbox">
+        <input
+          type="checkbox"
+          id="checkbox1"
+          name="checkbox"
+          value="checkbox"
+        />
+        <label for="checkbox1">Subscribe to our exclusive email offers</label>
+      </div>
+      <div class="submit">
+        <button>REGISTER</button>
+      </div>
+    </div>
+  </body>
+</html>
