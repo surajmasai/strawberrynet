@@ -24,23 +24,24 @@
       }
       .container {
         max-width: 2000px;
+        max-height: 500px;
         margin-right: auto;
         margin-top: auto;
         padding-left: 15px;
         padding-right: 15px;
       }
       .navbar-brand {
-        background: url(https://a.cdnsbn.com/images/common/2016CompanyLogo.png)
-          no-repeat scroll center center transparent;
         background-size: contain;
         width: 250px;
-        height: 120px;
+        height: 150px;
         display: block;
-        text-indent: -9999px;
-        color: transparent;
-        margin-left: 350px;
-      }
-      a {
+        margin-left: 330px;
+        }
+        .navbar-brand > img{
+          margin-top: 20px;
+          margin-left: 30px;
+        }
+       .navbar-brand > a {
         text-decoration: none;
         display: inline-block;
         padding: 0px 0px 0px 0px;
@@ -48,35 +49,155 @@
       }
       .navbar-right {
         float: right;
-        margin-top: -100px;
+        margin-top: -120px;
       }
       li {
         color: violet;
         float: left;
-        margin: 15px;
+        
+        margin-right: 130px;
+        margin-left: 0px;
         font-size: 20px;
       }
       .searchbar{
-      text-align: center;
-      margin-top: -70px;      
+      text-align: center; 
+      margin-top: -80px;     
       }
       .searchbar > input{
-       
         width: 300px;
         height: 30px;
+      }
+      .menubar{
+        width: 1900px;
+        height: 40px;
+        background: #633a81;
+        padding-left: 50px;
+        padding-right: 20px;
+        
+      }
+       
+       .button > a{
+        color: white;
+        cursor: pointer;
+        font-size: 17px;
+        /* border: 1px solid red; */
+        margin: 5px;
+        text-align: center;
+        padding-bottom: 18px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      .button>a:hover{
+        background-color: white;
+        color: #633a81;
+      }
+      .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: fit-content;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.rectangle {
+        width: 350px;
+        height: 600px;
+        border: 2px solid red;
+        margin: auto;
+        background-color: whitesmoke;
+      }
+      .button {
+        text-align: center;
+        margin-top: 5px;
+      }
+      .button > button {
+        width: 100px;
+        height: 30px;
+        border: 1px solid blue;
+      
+      }
+      .input > input {
+        width: 300px;
+        height: 30px;
+        margin-top: 10px;
+        margin-left: 20px;
+        border: 1px solid #633a81;
+      }
+      .input > p {
+        font-size: 16px;
+        margin-left: 20px;
+      }
+      .checkbox > input {
+        margin-left: 20px;
+        width: 30px;
+        height: 20px;
+      }
+      .checkbox > label {
+        margin-left: 5px;
+        font-size: 16px;
+      }
+      .submit > button {
+        margin-top: 30%;
+        margin-bottom: 5px;
+        margin-left: 16%;
+        width: 230px;
+        height: 40px;
+        border: none;
+        background-color: #633a81;
+        color: white;
+        font-size: 30px;
+      }
+      .submit > button:hover {
+        cursor: pointer;
+        color: black;
+        background-color: blanchedalmond;
+        border: 1px solid gray;
+      }
+       .forget{
+          margin-top: 10px;
+          margin-left: 20px;
       }
     </style>
   </head>
   <body>
     <div class="header-bg">
       <div class="container" id="header">
-        <a class="navbar-brand" title="StrawberryNET" href="index1.html"
-          >StrawberryNET</a>
-        
+        <a class="navbar-brand" title="StrawberryNET" href="index1.html">
+          <img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png" alt="">
+        </a>
         <div class="navbar-right">
           <ul class="menunav">
             <li class="signuplinks">
-              <a rel="nofollow" href="#" title="sign in" onclick="signIn()">
+              <a rel="nofollow" href="#" title="sign in" id="myBtn">
                 <span class="hidden-xs">Sign in</span>
               </a>
             </li>
@@ -98,6 +219,181 @@
           <input type="text" placeholder="SEARCH BRAND /PRODUCT"/>
         </div>
       </div>
+       <div class="menubar">
+         <div class="button">
+        <a href="#">SHOP BY BRAND</a>
+        <a href="#">SKINCARE</a>
+        <a href="#">MAKEUP</a>
+        <a href="#">HAIRCARE</a>
+        <a href="#">PERFUME</a>
+        <a href="#">MEN'S SKINCARE</a>
+        <a href="#">MEN'S COLOGNE</a>
+        <a href="#">HOME SCENTS</a>
+        <a href="#">NATURAL BEAUTY</a>
+        <a href="#">SPECIAL</a>
+        <a href="#">★NEW</a>
+     </div>
     </div>
+    </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+     
+    <div id="register" >
+          <div class="rectangle">
+      <div class="button">
+        <button id="sign" onclick="signIn()">Sign In</button>
+        <button id="new" onclick="signUp()">New Here?</button>
+      </div>
+      <hr />
+      <div class="input">
+        <input type="text" placeholder="FirstName" id="take_first"/><br />
+        <input type="text" placeholder="LastName" id="take_last" /><br />
+        <input type="text" placeholder="Email address" id="take_email"/><br />
+        <input type="password" placeholder="Password" id="take_password"/><br />
+        <p>
+          Please enter a minimum of 8 characters,including at least 1 letter and
+          1 number
+        </p>
+        <input type="password" placeholder="Re-enter your Password" id="take_password1"/>
+        <p>
+          By creating your account,you agree to our privacy & Terms & conditions
+        </p>
+      </div>
+      <div class="checkbox">
+        <input
+          type="checkbox"
+          id="checkbox1"
+          name="checkbox"
+          value="checkbox"
+        />
+        <label for="checkbox1">Subscribe to our exclusive email offers</label>
+      </div>
+      <div class="submit">
+        <button id="save_value">REGISTER</button>
+      </div>
+    </div>
+    </div>
+
+    <div id="login" style="display:none">
+      <div class="rectangle">
+      <div class="button">
+        <div class="button">
+        <button id="sign" onclick="signIn()">Sign In</button>
+        <button id="new" onclick="signUp()">New Here?</button>
+      </div>
+      </div>
+      <hr />
+      <div class="input">
+        <input type="text" placeholder="Email address" id="email"/><br />
+        <input type="text" placeholder="Password" id="pwd" /><br />
+      </div>
+       <div class="forget">
+        <a href="#">Forget Password</a>
+      </div>
+      <div class="submit">
+        <button id="logIn" >SIGN IN</button>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+</div>
   </body>
 </html>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+var register = document.getElementById("register");
+var login = document.getElementById("login");
+
+// var take_first = document.getElementById("take_first")
+// var take_last = document.getElementById("take_last")
+// var take_email = document.getElementById("take_email")
+// var take_password = document.getElementById("take_password")
+// var take_password1 = document.getElementById("take_password1")
+// var save_value = document.getElementById("save_value");
+
+
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeModal(){
+    modal.style.display = "none";
+}
+
+  span.onclick = function() {
+    closeModal();
+  }  
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+var signup = document.getElementById("sign");
+var newhere = document.getElementById("new");
+
+function signIn() {
+  // console.log("signup")
+register.style.display = "none";
+login.style.display = '';
+
+}
+function signUp() {
+  // console.log("newhere")
+login.style.display = "none";
+register.style.display = '';
+}
+
+save_value.onclick = function(e){
+  // console.log("res")
+  let user = {
+  take_first: document.getElementById("take_first").value,
+ take_last: document.getElementById("take_last").value,
+ take_email : document.getElementById("take_email").value,
+ take_password : document.getElementById("take_password").value,
+ take_password1 : document.getElementById("take_password1").value,
+  }
+localStorage.setItem("users",JSON.stringify(user))
+// console.log(localStorage.getItem("users"))
+e.preventDefault()
+}
+
+var data = JSON.parse(localStorage.getItem("users"));
+// console.log(data.take_email)
+
+logIn.onclick = function(){
+  //  console.log(data)
+ var sign = document.getElementById("email").value;
+ var pwd = document.getElementById("pwd").value;
+
+//  console.log(sign)
+if(sign == data.take_email && pwd == data.take_password){
+  closeModal();
+}else{
+  // console.log("no")
+  alert("email and password wrong");
+}
+}
+
+
+
+</script>
