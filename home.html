@@ -72,12 +72,16 @@
             font-weight: bold;
             font-family: Lato,sans-serif;
         }
+        .btn-hover > a:hover{
+            background-color: white;
+            color: #623381;
+        }
         .dailySpecial {
             margin-top: 1%;
-            margin-bottom: 6%;
+            margin-bottom: 2%;
         }
         .special-title {
-            padding: 3%;
+            padding: 1%;
         }
         .special-title > div{
             display: inline-block;
@@ -114,12 +118,15 @@
         .s_item_data {
             height: 15%;
         }
+        .best-deals .s_item_data {
+            height: 20%;
+        }
         .s_btn {
             text-align: center;
         }
         .best-deals {
             background-color: #ebe5f1;
-            margin-bottom: 6%;
+            /* margin-bottom: 6%; */
         }
         .best-deals .special-title > div{
             color: #623381;
@@ -133,6 +140,11 @@
             border: 5px solid red;
             background-color: white;
             margin-bottom: 50px;
+            padding: 10px;
+            
+        }
+        .best-deals .special-item {
+            margin: 0 6%;
         }
         .s_btn > button{
             background-color: #00a69c;
@@ -144,6 +156,9 @@
         }
         .s_btn > h5{
             color: #ee2c72;
+        }
+        .price-cont {
+            line-height: 0px;
         }
     </style>
 </head>
@@ -162,17 +177,17 @@
     </div>
     <div class="menu-cont">
         <div class="button btn-hover">
-            <a href="#">SHOP BY BRAND</a>
-            <a href="#">SKINCARE</a>
-            <a href="#">MAKEUP</a>
-            <a href="#">HAIRCARE</a>
-            <a href="#">PERFUME</a>
-            <a href="#">MEN'S SKINCARE</a>
-            <a href="#">MEN'S COLOGNE</a>
-            <a href="#">HOME SCENTS</a>
-            <a href="#">NATURAL BEAUTY</a>
-            <a href="#">SPECIAL</a>
-            <a href="#">★NEW</a>
+            <a href="#" title="SHOP BY BRAND">SHOP BY BRAND</a>
+            <a href="#" title="SKINCARE">SKINCARE</a>
+            <a href="#" title="MAKEUP">MAKEUP</a>
+            <a href="#" title="HAIRCARE">HAIRCARE</a>
+            <a href="#" title="PERFUME">PERFUME</a>
+            <a href="#" title="MEN'S SKINCARE">MEN'S SKINCARE</a>
+            <a href="#" title="MEN'S COLOGNE">MEN'S COLOGNE</a>
+            <a href="#" title="HOME SCENTS">HOME SCENTS</a>
+            <a href="#" title="NATURAL BEAUTY">NATURAL BEAUTY</a>
+            <a href="#" title="SPECIAL">SPECIAL</a>
+            <a href="#" title="★NEW">★NEW</a>
         </div>
     </div>
     <div class="dailySpecial">
@@ -187,7 +202,7 @@
                     <h4>Academie</h4>
                     <p>Phyto-Peeling With Seaweed (Salon Size) 200ml/6.75oz</p>
                 </div>
-                <div>
+                <div class="price-cont">
                     <p class="special-offer">SAVE 60%</p>
                     <h2>Rs. 3,035.50</h2>
                     <p>RRP Rs.7,607.50</p>
@@ -203,7 +218,7 @@
                     <h4>Bioelements</h4>
                     <p>His Perfect Shave 118ml/4oz</p>
                 </div>
-                <div>
+                <div class="price-cont">
                     <p class="special-offer">SAVE 20%</p>
                     <h2>Rs. 2,152.00</h2>
                     <p>RRP Rs.2,689.50</p>
@@ -218,7 +233,7 @@
                     <h4>Guerlain</h4>
                     <p>La Patite Robe Noire Eau Fraiche Eau De Toilette Spray 100ml/3.3oz</p>
                 </div>
-                <div>
+                <div class="price-cont">
                     <p class="special-offer">SAVE 39%</p>
                     <h2>Rs. 5,148.50</h2>
                     <p>RRP Rs.8,452.50</p>
@@ -233,7 +248,7 @@
                     <h4>Hermes</h4>
                     <p>Terre D'Hermes Eau De Toilette Spray 100ml/3.4oz</p>
                 </div>
-                <div>
+                <div class="price-cont">
                     <p class="special-offer">SAVE 23%</p>
                     <h2>Rs. 7,300.00</h2>
                     <p>RRP Rs.9,528.50</p>
@@ -257,7 +272,7 @@
                     <h4>Aveda</h4>
                     <p>Rosemary Mint Hand & Body Wash 1000ml</p>
                 </div>
-                <div>
+                <div class="price-cont">
                     <h2>Rs. 5,686.50</h2>
                 </div>
                 <div class="s_btn">
@@ -270,9 +285,9 @@
                 <div class="s_item_data">
                     <h4>Hugo Boss</h4>
                     <p>Hugo Eau De Toilette Spray 200ml/6.7oz</p>
-                </div>
-                <div>
                     <p class="special-offer">SAVE 21%</p>
+                </div>
+                <div class="price-cont">
                     <h2>Rs. 5,994.00</h2>
                     <p>RRP Rs.7,607.50</p>
                 </div>
@@ -286,7 +301,7 @@
                     <h4>Prada</h4>
                     <p>Luna Rossa Eau De Toilette Spray 150ml/5oz</p>
                 </div>
-                <div>
+                <div class="price-cont">
                     <h2>Rs. 8,145.50</h2>
                 </div>
                 <div class="s_btn">
@@ -299,7 +314,7 @@
                     <h4>The Art Of Shaving</h4>
                     <p>Shaving Cream - Dandalwood Essential Oil 150ml/5oz</p>
                 </div>
-                <div>
+                <div  class="price-cont">
                     <h2>Rs. 2,190.00</h2>
                 </div>
                 <div class="s_btn">
