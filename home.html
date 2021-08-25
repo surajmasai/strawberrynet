@@ -59,9 +59,16 @@
         }
 
         #right-cont>a {
-            margin-right: 50px;
+            margin-right: 40px;
             margin-top: 8%;
             color: #b53788;
+            font-size: 12px;
+        }
+        #right-cont svg{
+            padding: 4px;
+        }
+        .special-item .cut{
+            text-decoration: line-through;
         }
 
         .menu-cont {
@@ -195,6 +202,10 @@
         .special-item a svg:hover {
             fill: red;
         }
+        /* .special-item > div:hover{
+            
+
+        } */
 
         /* ......................slider style starts....................... */
 
@@ -394,9 +405,19 @@
         </div>
         <div id="right-cont">
 
-            <a href="#">Bag</a>
-            <a href="#">Wishlist</a>
-            <a href="#">Login</a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 18 18">
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+                </svg>Bag</a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 18 18">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+              </svg>Wishlist</a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 18 18">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>Login</a>
         </div>
     </div>
     <!-- ...........................header cont ends.............................. -->
@@ -536,7 +557,7 @@
                 <div class="price-cont">
                     <p class="special-offer">SAVE 60%</p>
                     <h2>Rs. 3,035.50</h2>
-                    <p>RRP Rs.7,607.50</p>
+                    <p class="cut">RRP Rs.7,607.50</p>
                 </div>
                 <div class="s_btn">
                     <button>Add to bag</button>
@@ -559,7 +580,7 @@
                 <div class="price-cont">
                     <p class="special-offer">SAVE 20%</p>
                     <h2>Rs. 2,152.00</h2>
-                    <p>RRP Rs.2,689.50</p>
+                    <p class="cut">RRP Rs.2,689.50</p>
                 </div>
                 <div class="s_btn">
                     <button>Add to bag</button>
@@ -581,7 +602,7 @@
                 <div class="price-cont">
                     <p class="special-offer">SAVE 39%</p>
                     <h2>Rs. 5,148.50</h2>
-                    <p>RRP Rs.8,452.50</p>
+                    <p class="cut">RRP Rs.8,452.50</p>
                 </div>
                 <div class="s_btn">
                     <button>Add to bag</button>
@@ -603,7 +624,7 @@
                 <div class="price-cont">
                     <p class="special-offer">SAVE 23%</p>
                     <h2>Rs. 7,300.00</h2>
-                    <p>RRP Rs.9,528.50</p>
+                    <p class="cut">RRP Rs.9,528.50</p>
                 </div>
                 <div class="s_btn">
                     <button>Add to bag</button>
@@ -664,7 +685,7 @@
                         </div>
                         <div class="price-cont">
                             <h2>Rs. 5,994.00</h2>
-                            <p>RRP Rs.7,607.50</p>
+                            <p class="cut">RRP Rs.7,607.50</p>
                         </div>
                         <div class="s_btn">
                             <button>Add to bag</button>
