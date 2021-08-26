@@ -26,15 +26,17 @@
        } */
        div>div:nth-child(1){
            grid-area: top1;
-           height: 400px;
+           height: 450px;
            width: 700px;
-           background-color: white;
+           background-color: red;
+           margin-bottom: 20px;
        }
        div>div:nth-child(2){
            grid-area: left1;
            height: 800px;
            width: 700px;
            background-color: white;
+           
        }
        
        div>div:nth-child(3){
@@ -46,7 +48,7 @@
        
        div>div:nth-child(4){
            grid-area: left3;
-           height: 500px;
+           height: 800px;
            width: 700px;
            background-color: white;
        }
@@ -145,7 +147,33 @@
   .random_text {
       text-align: center;
   }
-  
+  .round_btn{
+      /* width: 5px; */
+      height: 15px;
+      border-radius: 5px;
+
+  }
+  .pay_input{
+      width: 500px;
+      height: 30px;
+      margin-bottom: 10px;
+      margin-left: 40px;
+  }
+  .pay_input_mmyy{
+      width: 250px;
+      height: 30px;
+      margin-left: 40px;
+  }
+  .pay_input_code{
+      width: 240px;
+      height: 30px;
+  }
+  .form-popup{
+      display: none
+  }
+  #visa{
+      float: left;
+  }
     </style>
 </head>
 <body>
@@ -163,14 +191,11 @@
 
 
             <div id="data">
-                <!-- <img id="image" src=""/>
+                <img id="image" src="https://a.cdnsbn.com/images/products/msn/22607476739.jpg"/>
               <p id="name">Name</p>
               <p id="qty">qty</p>
-              <p id="price">price</p> -->
+              <p id="price">price</p>
             </div>
-
-
-
 
             <div class="clear"></div>
             <hr/>
@@ -231,59 +256,113 @@
 
             <h2 style="margin-left: 10px;">PAYMENT</h2>
 
-            <a style="margin-left: 10px;" class="payment" href="input.html">
+            <p style="margin-left: 10px;" class="payment">
                 
-              <input type="radio" id="visa"/>
+                <button type="radio" class="round_btn"  onclick="openForm()"></button>
               <img src="https://s.cdnsbn.com/images/common/Visa.png"/> 
               Visa - credit or debit card
-            </a>
+              <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br/>
+                  <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+                  <input type="text" name="" id="" placeholder="Security Code"  class="pay_input_code">
+                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+              </div>
+            </p>
 
 
-
-            <a style="margin-left: 10px;" class="payment" href="input.html">
+            <p style="margin-left: 10px;" class="payment">
                
-              <input type="radio" id="visa"/>
+                <button type="radio" class="round_btn"  onclick="openForm()"></button>
               <img src="https://s.cdnsbn.com/images/common/Master.png"/> 
               MasterCard - credit or debit card
-            </a>
+              <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br/>
+                  <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+                  <input type="text" name="" id="" placeholder="Security Code"  class="pay_input_code">
+                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+              </div>
+            </p>
 
                 
-                <a style="margin-left: 10px;" class="payment" href="">
+                <p style="margin-left: 10px;" class="payment">
                   
-                  <input type="radio" id="visa"/>
+                    <button type="radio" class="round_btn"  onclick="openForm()"></button>
                   <img src="https://s.cdnsbn.com/images/common/Paypal.png"/> 
                   Paypal
-                </a>
+                  <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                      <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br/>
+                      <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+                      <input type="text" name="" id="" placeholder="Security Code"  class="pay_input_code">
+                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                  </div>
+                </p>
 
-                <a style="margin-left: 10px;" class="payment" href="input.html">
+                <p style="margin-left: 10px;" class="payment" >
                   
-                  <input type="radio" id="visa"/>
+                    <button type="radio" class="round_btn"  onclick="openForm()"></button>
                   <img src="https://s.cdnsbn.com/images/common/AmericanExpress.png"/> 
                   American Express
-                </a>
+                  <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                      <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br/>
+                      <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+                      <input type="text" name="" id="" placeholder="Security Code"  class="pay_input_code">
+                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                  </div>
+                </p>
 
-                <a style="margin-left: 10px;" class="payment" href="input.html">
+                <p style="margin-left: 10px;" class="payment">
                    
-                  <input type="radio" id="visa"/>
+                    <button type="radio" class="round_btn"  onclick="openForm()"></button>
                   <img src="https://s.cdnsbn.com/images/common/DinersClub.png"/> 
                   Diners
-                </a>
+                  <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                      <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br/>
+                      <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+                      <input type="text" name="" id="" placeholder="Security Code"  class="pay_input_code">
+                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                  </div>
+                </p>
 
 
-                <a style="margin-left: 10px;" class="payment" href="input.html">
+                <p style="margin-left: 10px;" class="payment">
                  
-                  <input type="radio" id="visa"/>
+                    <button type="radio" class="round_btn"  onclick="openForm()"></button>
                   <img src="https://s.cdnsbn.com/images/common/JCB.png"/> 
                   JCB
-                </a>
+                  <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                      <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br/>
+                      <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+                      <input type="text" name="" id="" placeholder="Security Code"  class="pay_input_code">
+                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                  </div>
+                </p>
 
 
-                <a style="margin-left: 10px;" class="payment" href="input.html">
-                   
-                  <input type="radio" id="visa"/>
+                <p style="margin-left: 10px;" class="payment"> 
+                  <button type="radio" class="round_btn"  onclick="openForm()"></button>
                   <img src="https://s.cdnsbn.com/images/common/union_pay.png"/> 
                   CHINA UNION PAY
-                </a>
+                  <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                      <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br/>
+                      <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+                      <input type="text" name="" id="" placeholder="Security Code"  class="pay_input_code">
+                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                  </div>
+                </p>
 
                 <button class="payment_btn">Pay Now</button>
                 <p class="random_text">Registry of Company: Strawberry Fields, No. 4 A Kung Ngam Village Road, Shau Kei Wan, Hong Kong</p>
@@ -298,11 +377,10 @@
       <!-- stop -->
 
                </div>
- 
 
 
 
-         
+               
 
            <div>
             <h3 style="margin-left: 10px;"><b>ENTER PROMO CODE</b></h3>
@@ -324,49 +402,59 @@
 
 <script>
 
-let cart_data = JSON.parse(localStorage.getItem("cart"))
-let data_div = document.getElementById("data")
+// let cart_data = JSON.parse(localStorage.getItem("cart"))
+// let data_div = document.getElementById("data")
 
-    var total = 0
-cart_data.forEach(function(product){
-    let div = document.createElement("div");
+//     var total = 0
+// cart_data.forEach(function(product){
+//     let div = document.createElement("div");
 
 
     
-    let p_name = document.createElement("p");
-    p_name.innerHTML = product.name
+//     let p_name = document.createElement("p");
+//     p_name.innerHTML = product.name
 
-    let p_price = document.createElement("p")
-    p_price.innerHTML = product.price+` rs`
+//     let p_price = document.createElement("p")
+//     p_price.innerHTML = product.price+` rs`
 
-    let image = document.createElement("img")
-    image.src = product.image+` rs`
+//     let image = document.createElement("img")
+//     image.src = product.image+` rs`
 
 
    
 
-    div.append(image,p_name,p_price)
+//     div.append(image,p_name,p_price)
 
-    data_div.append(div)
+//     data_div.append(div)
 
-    image.setAttribute("class","image")
+//     image.setAttribute("class","image")
 
-    total = total+Number(product.price)
+//     total = total+Number(product.price)
 
 
     // for css 
-    imag
+    // imag
     // p_name.setAttribute("id","name")
     // p_price.setAttribute("id","price")
 
 
- console.log(total)
+//  console.log(total)
  
-})
+// })
 
 
-let total_h1 = document.getElementById("total")
-    total_h1.innerHTML = `Item Total:-`+total+` rs`
+// let total_h1 = document.getElementById("total")
+//     total_h1.innerHTML = `Item Total:-`+total+` rs`
+
+
+
+
+    function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 
 
 </script>
