@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ body {
+            width: 80%;
+            /* height: 700px; */
+            margin: auto;
+            /* border: 2px solid black; */
+            /* margin-top: 200px; */
+            background-color: rgb(175, 170, 170);
+        }
+        .image {
+            width: 100px;
+            float: left;
+        }
+      .inp {
+          float: left;
+          /* margin-top: 10px; */
+          margin-right: 70px;
+          background-color: white;
+          width: 300px;
+          height: 300px;
+        
+        
+      }
+        .text {
+      font-size: 20px;
+      text-align: center;
+      float: left;
+      margin-left: 10px;
+        }
+       
+        #data {
+          display: grid;
+          grid-template: 20%
+                         20%
+                         20%
+                         20%;
+         grid-gap: 5%; 
+         /* background-color:gray;  */
+         height: 50%;
+        width: 680px; 
+                     
+        }
+     #heading {
+         text-align: center;
+         color: hotpink;
+         font-size: 20px;
+     }
+   
+
+     h2 {
+         background-color:white;
+         height: 5%;
+         width: 63%;
+         padding: 10px;
+     }
+span {
+    text-align: right;
+}
+.shoipingfeeber{
+   background-color: gray;
+   width: 60%;
+   height: 10px;
+   border-radius: 10px;
+      
+}
+.shipingamt {
+    background-color: hotpink;
+    height: 10px;
+}
+button {
+    margin-top: 50%;
+    margin-left: 18%;
+    padding: 10px;
+    width: 200px;
+    background-color: purple;
+    border: none;
+  
+}
+.text-col a {
+    color: white;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.inp> p {
+    font-size: 30px;
+    margin-top: 60px;
+    margin-left: 40px;
+margin-bottom: 0px;
+}
+#flage {
+    width: 3%;
+}
+#background-color{
+    background-color: white;
+    width: 700px;
+    float: left;
+    /* margin-left: 19px; */
+}
+
+#total{
+   margin-right: 500px;
+   
+}
+
+#name{
+    width: 5%;
+    float: left;
+    margin-right: 25%;
+    margin-left: 2%;
+}
+
+#order_total{
+    margin-right: 400px;
+}
+#checkout_text{
+    color: black;
+}
+
+/* .clear{
+    clear: both;
+} */
+#noti{
+    width: 65%;
+    background-color: gray;
+    margin-top: 60%;
+}
+.hr1{
+    width: 100%;
+}
+/* .bg-for-shipingbar{
+    background-color: white;
+} */
+
+#price{
+    float: right;
+}
+    </style>
+    
+</head>
+<body>
+
+    <h1>SHOPING BAG</h1>
+ 
+<h2>DELIVER TO:<img id="flage" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"/> <a href="">India</a></h2>
+
+
+<div class="bg-for-shipingbar">
+  
+</div>
+
+
+
+
+<div id="background-color">
+    <p>Spend INR5,747.20 more for a reduced standard shipping fee at INR384.20.​</p>
+    <div class="shoipingfeeber">
+        <div class="shipingamt" style="width: 17%;"></div>
+    </div>
+    <p>INR768.40 delivery fee for order below INR7,684.00.​ Free standard shipping for order above INR11,526.00.</p>
+    <hr class="hr1"/>
+    <div id="data"></div>
+    <hr class="hr1"/>
+    <p id="total"></p>
+    <p id="shiping"></p>
+    <p id="surcharge"></p>
+    <hr class="hr1"/>
+    <h3 id="order_total"></h3>
+</div>
+
+
+        <div class="clear"></div>
+
+  
+
+  
+    
+           <div class="inp">
+            <p id="checkout_text">Check Out as Ravi</p>
+           <button onclick="checkoutpage()" class="text-col">
+             <a href="checkoutpage.html">CHECKOUT</a></button>
+        </div>
+
+
+        <div id="noti">
+        <ul>
+            <h3>Notification</h3>
+            <li>Due to recent flight scheduling changes, orders may experience delivery delays.</li>
+            <li>Due to current situation, a 3.5% freight surcharge will be applied to your order</li>
+            <li>Please note that delivery to your selected region will be delayed because order dispatches are on hold due to shipping restrictions. For more information, please contact info@strawberrynet.com.</li>
+           <li>This order may be subject to duties and taxes, which are payable by the customer and are not refundable</li>
+      </ul>
+       </div>
+    
+</body>
+</html>
+
+<script>
+
+let cart_data = JSON.parse(localStorage.getItem("cart"))
+let data_div = document.getElementById("data")
+
+    var total = 0
+cart_data.forEach(function(product){
+    let div = document.createElement("div");
+
+
+    
+    let p_name = document.createElement("p");
+    p_name.innerHTML = product.name
+
+    let p_price = document.createElement("p")
+    p_price.innerHTML = product.price+` rs`
+
+    let image = document.createElement("img")
+    image.src = product.image+` rs`
+
+
+    div.append(image,p_name,p_price)
+
+    data_div.append(div)
+
+    image.setAttribute("class","image")
+
+    total = total+Number(product.price)
+
+
+    // for css 
+    p_name.setAttribute("id","name")
+    p_price.setAttribute("id","price")
+
+
+ console.log(total)
+ 
+})
+
+
+let total_h1 = document.getElementById("total")
+    total_h1.innerHTML = `Item Total:-`+total+` rs`
+
+   var shiping = 120
+   var a = Number(shiping)
+   let shiping_charge = document.getElementById("shiping")
+   shiping_charge.innerHTML = `Standard Shipping (Signature):-`+ a+` rs`
+
+
+   var extra = 45
+   var b = Number(extra)
+   let surcharge = document.getElementById("surcharge")
+   surcharge.innerHTML = `Freight Surcharge:-`+b+` rs`
+
+   var total_amount = total+a+b
+   let totaItem = document.getElementById("order_total")
+   totaItem.innerHTML = `Order Total: 1 item(s)‎‎:-`+total_amount+` rs`
+
+
+
+function checkoutpage(){
+alert("Go to Payment")
+}
+
+</script>
