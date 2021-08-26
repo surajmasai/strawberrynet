@@ -88,11 +88,11 @@
       .total{
           float: left;
       }
-      input{
+       .input_btn{
           width: 650px;
           height: 30px;
           margin: 10px;
-      }
+      } 
 
       select{
         width: 655px;
@@ -117,7 +117,7 @@
     .payment{
         font-size: 20px;
         display: flex;
-        margin-top: 10px;
+        /* margin-top: 10px; */
     }
     .payment_btn{
         margin-left: 100px;
@@ -130,6 +130,7 @@
     }
     #promo{
         width: 370px;
+        font-size: 15px;
 
     }
     .apply_promo_btn{
@@ -141,7 +142,10 @@
         font-size: 20px;
         color: white;
     }
-   
+  .random_text {
+      text-align: center;
+  }
+  
     </style>
 </head>
 <body>
@@ -155,10 +159,19 @@
              <li>This order may be subject to duties and taxes, which are payable by the customer and are not refundable.</li>
          </ul>
          <hr/>
-            <img id="image" src="https://a.cdnsbn.com/images/products/msn/26370083139.jpg"/>
-            <p id="name">Name</p>
-            <p id="qty">qty</p>
-            <p id="price">price</p>
+
+
+
+            <div id="data">
+                <!-- <img id="image" src=""/>
+              <p id="name">Name</p>
+              <p id="qty">qty</p>
+              <p id="price">price</p> -->
+            </div>
+
+
+
+
             <div class="clear"></div>
             <hr/>
             <h1 style="margin-left: 10px;" class="total">Item total</h1>
@@ -170,46 +183,46 @@
         <div>
              <h1 style="margin-left: 10px;">Shiping information</h1>
                <h2 style="margin-left: 10px;">Shiping Address</h2>
-               <input type="text"  id="first_name" placeholder="First Name*"/>
-               <input type="text" id="last_name" placeholder="Last Name*"/>
-               <input type="text" id="company" placeholder="Company"/>
+               <input type="text"  id="first_name" placeholder="First Name*" class="input_btn"/>
+               <input type="text" id="last_name" placeholder="Last Name*" class="input_btn"/>
+               <input type="text" id="company" placeholder="Company" class="input_btn"/>
               
            <select>
                <option value="india">India</option>
                <option value="Nepal">Nepal</option>
                <option value="Usa">Usa</option>
-               <option value="Canada">Canda</option>
+               <option value="Canada">Canada</option>
            </select>
 
 
-               <input type="text" name="" id="address" placeholder="Address"/>
-               <input type="text"/>
-               <input type="text"/>
-               <input type="text" id="city" placeholder="City/Town"/>
-               <input type="text" name="" id="state" placeholder="State/Province"/>
-               <input type="text" name="" id="zip" placeholder="Zip/Postal code"/>
-               <input type="text" name="" id="mobile" placeholder="Mobile">
+               <input type="text" name="" id="address" placeholder="Address" class="input_btn"/>
+               <input type="text" class="input_btn"/>
+               <input type="text" class="input_btn"/>
+               <input type="text" id="city" placeholder="City/Town" class="input_btn"/>
+               <input type="text" name="" id="state" placeholder="State/Province" class="input_btn"/>
+               <input type="text" name="" id="zip" placeholder="Zip/Postal code" class="input_btn"/>
+               <input type="text" name="" id="mobile" placeholder="Mobile" class="input_btn"/>
                <button id="btn"><b>Save & Continue</b></button>
 
         </div>
 
+        
      
           <div>
              <h3 style="margin-left: 10px;">DELIVERY OPTIONS & GIFT MESSAGE</h3>
            
                <h4 style="margin-left: 10px;">DELIVERY OPTIONS</h4>
-              <ul>
-                  <li>
+            
+                  <p>
                     INR384.20 - Standard Shipping (Signature)
-                    <a class="adjust_anker" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                      </svg></a>
-                  </li>
-              </ul>
+                    <a class="adjust_anker" href="">
+                      <input type="radio" id="visa"/>
+                    </a>
+                </p>
+             
               <hr/>
-                  <h3 style="margin-left: 10px;">ADD GIFT MESSAGE(OPTIONAL) <a class="adjust_anker" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                  </svg></a></h3>
+                  <h3 style="margin-left: 10px;">ADD GIFT MESSAGE(OPTIONAL)<a class="adjust_anker" href="">
+                </a></h3>
 
           </div>
 
@@ -218,65 +231,80 @@
 
             <h2 style="margin-left: 10px;">PAYMENT</h2>
 
-            <a style="margin-left: 10px;" class="payment" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-              </svg>
+            <a style="margin-left: 10px;" class="payment" href="input.html">
+                
+              <input type="radio" id="visa"/>
               <img src="https://s.cdnsbn.com/images/common/Visa.png"/> 
               Visa - credit or debit card
             </a>
 
 
 
-            <a style="margin-left: 10px;" class="payment" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-              </svg>
+            <a style="margin-left: 10px;" class="payment" href="input.html">
+               
+              <input type="radio" id="visa"/>
               <img src="https://s.cdnsbn.com/images/common/Master.png"/> 
               MasterCard - credit or debit card
             </a>
 
                 
-                <a style="margin-left: 10px;" class="payment" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  </svg>
+                <a style="margin-left: 10px;" class="payment" href="">
+                  
+                  <input type="radio" id="visa"/>
                   <img src="https://s.cdnsbn.com/images/common/Paypal.png"/> 
                   Paypal
                 </a>
 
-                <a style="margin-left: 10px;" class="payment" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  </svg>
+                <a style="margin-left: 10px;" class="payment" href="input.html">
+                  
+                  <input type="radio" id="visa"/>
                   <img src="https://s.cdnsbn.com/images/common/AmericanExpress.png"/> 
                   American Express
                 </a>
 
-                <a style="margin-left: 10px;" class="payment" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  </svg>
+                <a style="margin-left: 10px;" class="payment" href="input.html">
+                   
+                  <input type="radio" id="visa"/>
                   <img src="https://s.cdnsbn.com/images/common/DinersClub.png"/> 
                   Diners
                 </a>
 
 
-                <a style="margin-left: 10px;" class="payment" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  </svg>
+                <a style="margin-left: 10px;" class="payment" href="input.html">
+                 
+                  <input type="radio" id="visa"/>
                   <img src="https://s.cdnsbn.com/images/common/JCB.png"/> 
                   JCB
                 </a>
 
 
-                <a style="margin-left: 10px;" class="payment" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  </svg>
+                <a style="margin-left: 10px;" class="payment" href="input.html">
+                   
+                  <input type="radio" id="visa"/>
                   <img src="https://s.cdnsbn.com/images/common/union_pay.png"/> 
                   CHINA UNION PAY
                 </a>
 
                 <button class="payment_btn">Pay Now</button>
+                <p class="random_text">Registry of Company: Strawberry Fields, No. 4 A Kung Ngam Village Road, Shau Kei Wan, Hong Kong</p>
+
+<!-- stop -->
+
+
+
+
+
+
+      <!-- stop -->
+
                </div>
+ 
 
 
-        <div>
+
+         
+
+           <div>
             <h3 style="margin-left: 10px;"><b>ENTER PROMO CODE</b></h3>
             <input type="text"  id="promo"/>
             <button class="apply_promo_btn">APPLY</button>
@@ -293,6 +321,59 @@
     </div>
 </body>
 </html>
+
+<script>
+
+let cart_data = JSON.parse(localStorage.getItem("cart"))
+let data_div = document.getElementById("data")
+
+    var total = 0
+cart_data.forEach(function(product){
+    let div = document.createElement("div");
+
+
+    
+    let p_name = document.createElement("p");
+    p_name.innerHTML = product.name
+
+    let p_price = document.createElement("p")
+    p_price.innerHTML = product.price+` rs`
+
+    let image = document.createElement("img")
+    image.src = product.image+` rs`
+
+
+   
+
+    div.append(image,p_name,p_price)
+
+    data_div.append(div)
+
+    image.setAttribute("class","image")
+
+    total = total+Number(product.price)
+
+
+    // for css 
+    imag
+    // p_name.setAttribute("id","name")
+    // p_price.setAttribute("id","price")
+
+
+ console.log(total)
+ 
+})
+
+
+let total_h1 = document.getElementById("total")
+    total_h1.innerHTML = `Item Total:-`+total+` rs`
+
+
+</script>
+
+
+
+
 
 
 
