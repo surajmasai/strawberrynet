@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <style>
+      body {
+        width: 80%;
+        margin: auto;
+        background-color: rgb(235, 228, 228);
+      }
+      #grid {
+        display: grid;
+        gap: 5%;
+        grid-template:
+          "top right"
+          "left right";
+      }
+      /* div>div{
+          border: 1px solid red;
+
+      } */
+      div > div:nth-child(1) {
+        grid-area: top;
+        height: 80px;
+        width: 700px;
+        background-color: white;
+      }
+      div > div:nth-child(2) {
+        grid-area: left;
+        width: 700px;
+        background-color: white;
+      }
+      div > div:nth-child(3) {
+        grid-area: right;
+        height: 300px;
+        width: 350px;
+        background-color: white;
+      }
+      #shipingbar {
+        width: 600px;
+        height: 10px;
+        background-color: gray;
+        border-radius: 5px;
+      }
+      #data {
+        float: left;
+      }
+      #name {
+        float: right;
+      }
+      #price {
+        float: right;
+        margin-left: 250px;
+      }
+      #qty {
+        float: right;
+        margin-left: 200px;
+      }
+
+      #shipingbar > div {
+        width: 40%;
+        height: 10px;
+        background-color: hotpink;
+      }
+      h2 {
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      #anker {
+        border: 1px solid black;
+        font-size: 30px;
+        margin-left: 80px;
+        background-color: purple;
+        color: white;
+        padding: 15px;
+      }
+      .close {
+        margin-top: 0px;
+        float: right;
+      }
+
+      #products > div {
+        border: 2px solid rgb(115, 91, 202);
+        border-radius: 5px;
+        display: grid;
+        width: 690px;
+      }
+      #products > div > p {
+        color: red;
+        margin-left: 10px;
+        font-size: 15px;
+      }
+      img {
+        width: 13%;
+      }
+      #total {
+        float: right;
+        margin-right: 10px;
+      }
+      #signature {
+        float: right;
+        margin-right: 10px;
+      }
+      #surcharge {
+        float: right;
+        margin-right: 10px;
+      }
+      #order_total {
+        float: right;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shoping Bag</h1>
+    <div id="grid">
+      <div>
+        <h1 style="margin-left: 10px">Deliver To: <a href="">India</a></h1>
+      </div>
+
+      <div>
+        <!-- <a class="close" href="">X</a> -->
+        <p style="margin-left: 10px">
+          Spend INR4,433.70 more for a reduced standard shipping fee at
+          INR384.20.​
+        </p>
+        <div style="margin-left: 10px" id="shipingbar"><div></div></div>
+        <p style="margin-left: 10px">
+          INR768.40 delivery fee for order below INR7,684.00.​ Free standard
+          shipping for order above INR11,526.00.
+        </p>
+        <p style="margin-left: 10px">Goods shipped from Strawberrynet</p>
+        <hr />
+        <div id="data">
+          <div id="products">
+            <hr />
+            <p style="margin-left: 10px">
+              Item Total: 1 item(s)‎:
+              <span id="total"></span>
+            </p>
+            <p style="margin-left: 10px">
+              Standard Shipping (Signature):
+              <span id="signature"></span>
+            </p>
+            <p style="margin-left: 10px">
+              Freight Surcharge
+              <span id="surcharge"></span>
+            </p>
+
+            <hr />
+            <h1 style="margin-left: 10px">
+              Order Total:
+              <span id="order_total"></span>
+            </h1>
+          </div>
+          <hr />
+          <ul>
+            <h2>Notification</h2>
+            <li>
+              Due to recent flight scheduling changes, orders may experience
+              delivery delays.
+            </li>
+            <li>
+              Due to current situation, a 3.5% freight surcharge will be applied
+              to your order
+            </li>
+            <li>
+              Please note that delivery to your selected region will be delayed
+              because order dispatches are on hold due to shipping restrictions.
+              For more information, please contact info@strawberrynet.com.
+            </li>
+            <li>
+              This order may be subject to duties and taxes, which are payable
+              by the customer and are not refundable.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2>
+          Checkout as
+          <span id="username1"></span>
+        </h2>
+
+        <a id="anker" href="checkout.html">CHECKOUT</a>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let cart_data = JSON.parse(localStorage.getItem("items"));
+
+  let products_div = document.getElementById("products");
+
+  var total = 0;
+
+  cart_data.forEach(function (p) {
+    let div = document.createElement("div");
+
+    let p_name = document.createElement("p");
+    p_name.innerHTML = p.name;
+
+    let p_description = document.createElement("p");
+    p_description.innerHTML = p.description;
+
+    let p_price = document.createElement("p");
+    p_price.innerHTML = p.price;
+
+    let p_image = document.createElement("img");
+    p_image.src = p.image;
+
+    let remove_item = document.createElement("button");
+    remove_item.textContent = "Delete";
+    remove_item.onclick = function () {
+      deleteFromCart(p);
+    };
+
+    div.append(p_image, p_name, p_description, p_price, remove_item);
+
+    products_div.append(div);
+
+    // console.log(typeof p.price);
+    // var rate = +p.price;
+    // console.log(typeof rate);
+    total = parseFloat(total) + parseFloat(p.price.replace(/,/g, ""));
+    // console.log(total);
+  });
+  function deleteFromCart(p) {
+    // console.log(p);
+
+    const cartData = JSON.parse(localStorage.getItem("items"));
+
+    const newData = deleteFn(cartData, p);
+
+    localStorage.setItem("items", JSON.stringify(newData));
+
+    window.location.reload();
+  }
+  function deleteFn(cartData, p) {
+    for (let i = 0; i < cartData.length; i++) {
+      // item to delete
+      const productName = p.name;
+
+      if (cartData[i].name == productName) {
+        cartData.splice(i, 1);
+      }
+    }
+
+    return cartData;
+  }
+
+  let total_p = document.getElementById("total");
+  total_p.innerHTML = `Rs ${total}`;
+
+  let standard_p = document.getElementById("signature");
+  standard_p.innerHTML = `Rs ${300.5}`;
+
+  let surcharge_p = document.getElementById("surcharge");
+  surcharge_p.innerHTML = `Rs ${300.5}`;
+
+  let order_total = document.getElementById("order_total");
+  order_total.innerHTML = `Rs ${total + 300.5 + 300.5}`;
+
+  let username_data = JSON.parse(localStorage.getItem("users"));
+  console.log(username_data.take_first);
+
+  let username1 = document.getElementById("username1");
+  username1.innerHTML = username_data.take_first + "?";
+</script>
