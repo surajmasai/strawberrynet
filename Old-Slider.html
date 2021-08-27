@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <style>
+        #s-full-cont {
+            max-width: 100%;
+            border: 1px solid black;
+            text-align: center;
+            margin:auto;
+        }
+        #s-full-cont > img {
+            margin: 2%;
+            border-radius: 50px;
+        }
+        #ship-cont{
+            width:20%;
+            height:30px;
+            float:right;
+            margin-right: 7%;
+            background-color:orange;
+            border-radius: 0px 0px 8px 8px;
+        }
+        #ship-cont h5 {
+            color: white;
+            font-size:11px;
+            margin: auto;
+            float:left;
+            margin-top: 9px;
+            margin-left: 20px;
+        }
+        #ship-cont h8 {
+            color: white;
+            font-size:9.5px; 
+            float :right;
+            margin-top:11px;
+            margin-right: 20px;
+        }
+        #s-dots {
+            width:100%;
+        }
+        #s-dots > ul {
+            text-align: center;
+            width:60%;
+            margin: auto;
+        }
+        
+        #s-dots > ul > li {
+            float :left;
+            border:1% solid red;
+            width:8%;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="s-full-cont">
+            <div id="ship-cont">
+                <h5>FREE WORLDWIDE SHIPPING.</h5>
+                <h8>Conditions apply</h8>
+            </div>
+            <img src="https://a.cdnsbn.com/images/English/banner_SaleFiesta8offAug21_1170_1.jpg" id="slideimage"/>
+            
+    </div>
+    <script>
+        var images= [
+        "https://a.cdnsbn.com/images/English/banner_SkincareSensitiveSkinAug21_1170_1.jpg?v=3",
+        "https://a.cdnsbn.com/images/English/banner_MenSkincareAug21_1170_1.jpg?v=3",
+        "https://a.cdnsbn.com/images/English/banner_Aug21SpecialPurchase_1170_1.jpg",
+        "https://a.cdnsbn.com/images/English/banner_HalfPriceSkincareAug21_1170_1.jpg?v=3",
+        "https://a.cdnsbn.com/images/English/banner_MakeupAllComplexionAug21_1170_1.jpg?v=3",
+        "https://a.cdnsbn.com/images/English/banner_Aug21top40_1170_1.jpg",
+        "https://a.cdnsbn.com/images/English/banner_Aug21NewLines_1170_1.jpg",
+        "https://a.cdnsbn.com/images/English/banner_VeganBeautyNov20_1170_1.jpg",
+        "https://a.cdnsbn.com/images/English/banner_AshiyaMay21_1170_1.jpg",
+        "https://a.cdnsbn.com/images/English/banner_MedicalMask28Sep20_1140_1.jpg",
+        "https://a.cdnsbn.com/images/English/banner_BrandTacticalDemonFeb20_1140_1.jpg",
+        "https://a.cdnsbn.com/images/English/banner_RewardProgramBP_1140_1.jpg"
+        ];
+
+        var i = 0;
+
+        function slides (){
+            document.getElementById("slideimage").src = images[i];
+            if (i < (images.length-1))
+                i++;
+             else 
+                i=0;
+        }
+        setInterval(slides,1000)
+    </script>
+</body>
+</html>
