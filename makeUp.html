@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,22 +21,22 @@
             background: url("https://a.cdnsbn.com/images/common/2016headerbg.jpg?v=2") top center no-repeat;
 
         }
+#strawberry-cont {
+        float: left;
+        width: 18%;
+        padding: 20px 20px 20px 20px;
+        padding-left: 50px;
+        margin-left: 16%;
+      }
 
-        #strawberry-cont {
-            float: left;
-            width: 30%;
-            padding: 20px 20px 20px 20px;
-            padding-left: 50px;
-        }
-
-        #search-cont {
-            text-align: center;
-            width: 50%;
-        }
+      #search-cont {
+        text-align: center;
+        width: 40%;
+      }
 
         #search-cont>input {
             border: 2px solid purple;
-            width: 60%;
+            width: 50%;
             height: 30%;
             margin-top: 25px;
             border-radius: 12px;
@@ -52,8 +53,7 @@
         #right-cont {
             display: flex;
             flex-direction: row-reverse;
-            /* border: 1px solid black; */
-            width: 20%;
+            width: 15%;
         }
 
         #right-cont>a {
@@ -81,7 +81,10 @@
 
         .button>a {
             color: white;
-            padding: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 14px;
+            padding-bottom: 14px;
             font-size: 12px;
             font-weight: bold;
             text-decoration: none;
@@ -92,12 +95,6 @@
             background-color: white;
             color: #623381;
             text-decoration: underline;
-        }
-
-        .main-cont {
-            width: 95%;
-            margin-left: 3%;
-            margin-right: 3%;
         }
 
         .banner > img {
@@ -155,6 +152,10 @@
         }
         .t1{
             margin-left: 20px;
+        }
+        #l2{
+            overflow-y: scroll;
+            height: 200px;
         }
         #left h3{
             color: #ef1275;
@@ -273,7 +274,7 @@
 <body>
      <!-- .........................header cont start............................ -->
      <div id="top-cont">
-        <div id="strawberry-cont"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png" /></div>
+        <div id="strawberry-cont"><a href="home1.html"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png" /></a></div>
         <div id="search-cont"><input type="text" placeholder="SEARCH BRAND/PRODUCTS" /><button>Search</button>
         </div>
         <div id="right-cont">
@@ -303,9 +304,9 @@
     <!-- ...........................menu cont starts............................ -->
     <div class="menu-cont">
         <div class="button btn-hover">
-            <a href="#" title="SHOP BY BRAND">SHOP BY BRAND</a>
+            <a href="shopByBrands.html" title="SHOP BY BRAND">SHOP BY BRAND</a>
             <a href="#" title="SKINCARE">SKINCARE</a>
-            <a href="#" title="MAKEUP">MAKEUP</a>
+            <a href="makeUp.html" title="MAKEUP">MAKEUP</a>
             <a href="#" title="HAIRCARE">HAIRCARE</a>
             <a href="#" title="PERFUME">PERFUME</a>
             <a href="#" title="MEN'S SKINCARE">MEN'S SKINCARE</a>
@@ -317,14 +318,7 @@
         </div>
     </div>
     <!-- .......................menu cont ends........................... -->
-    <div class="main-cont">
-        <!-- .......................Discount banner start........................... -->
-        <!-- <div class="banner">
-            <img src="https://a.cdnsbn.com/images/English/detail_SaleFiesta8offAug21_1170_1.jpg" alt="banner-img">
-        </div> -->
-        <!-- .......................Discount banner ends........................... -->
-
-    </div>
+    
 
     <div id="template">
         <div id="top">
@@ -359,7 +353,7 @@
 
             <hr/>
 
-            <div>
+            <div id="l2">
                 <h3>Refine by Brands</h3>
                 <table class="t1">
                     <tr>
@@ -422,40 +416,7 @@
 
             <hr/>
 
-            <!-- <div>
-                <h3>Refine by Specials</h3>
-                <table class="t1">
-                    <tr>
-                        <td><input type="checkbox">Daily Specials</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox">Hottest Offers in Town</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox">Bargain Zone</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox">Low Price Picks</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox">Perfect Your Complexion Regime</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox">New Products</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox">August New Arrivals</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox">Special Price</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox">Special Purchase</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox">This Month's Top 40</td>
-                    </tr>
-            </div> -->
+           
         </div>
         <div id="right">
             <div class="rd1">
@@ -555,7 +516,3 @@
     </div>
 
 </html>
-
-
-
-  
