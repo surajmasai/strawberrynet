@@ -31,10 +31,10 @@ var data = [
 
 data.forEach((item) => {
 
-  const itemData = item;
+const itemData = item;
   
 const html = `<div>
-          <a href="#"
+          <a onclick="wishlist('${item.name}', '${item.image}', '${item.price}', '${item.description}')"href="#"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -48,17 +48,20 @@ const html = `<div>
               />
             </svg>
           </a>
+          <a href= "p2.html">
           <img
             src=${item.image}
             alt="item-image"
-          />
+          >
+          </a>
+
           <div class="s_item_data">
             <h4>${item.name}</h4>
             <p>${item.description}</p>
           </div>
           <div class="price-cont">
             <p class="special-offer">SAVE 60%</p>
-            <h2>${item.price}</h2>
+            <h2> RS. ${item.price} </h2>
             <p>RRP Rs.7,607.50</p>
           </div>
           <div class="s_btn">
@@ -100,4 +103,28 @@ const itemData_json = JSON.stringify(cartData);
 const data_json = JSON.stringify(data);
 localStorage.setItem("data", data_json);
 
+function wishlist(name, image, price, description) {
+
+
+  
+   const wishlist_item = { name, image, price, description };
+
+  // fetch local storage data 
+  let wishlistData = localStorage.getItem("wish");
+
+  if (wishlistData) {
+    wishlistData = JSON.parse(wishlistData);
+  } else {
+    wishlistData = [];
+  }
+ 
+
+
+ // push the itemData object in parsedData
+  wishlistData.push(wishlist_item);
+  
+  
+  const wishlistData_json = JSON.stringify(wishlistData);
+  localStorage.setItem("wish", wishlistData_json)
+}
 
