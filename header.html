@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beauty Brands, Skincare, Makeup & Perfume | Strawberrynet INEN</title>
     <style>
-         #header-cont {
+        body {
             font-family: Lato, sans-serif;
             height: 100%;
             width: 100%;
@@ -26,7 +26,6 @@
             width: 30%;
             padding: 20px 20px 20px 20px;
             padding-left: 50px;
-            margin-left: 100px;
         }
 
         #search-cont {
@@ -36,7 +35,7 @@
 
         #search-cont>input {
             border: 2px solid purple;
-            width: 50%;
+            width: 60%;
             height: 30%;
             margin-top: 25px;
             border-radius: 12px;
@@ -53,7 +52,10 @@
         #right-cont {
             display: flex;
             flex-direction: row-reverse;
+            /* border: 1px solid black; */
             width: 20%;
+
+
         }
 
         #right-cont>a {
@@ -64,12 +66,10 @@
             text-align: center;
             text-decoration: none;
         }
-
-        #right-cont svg {
+        #right-cont svg{
             padding: 4px;
         }
-
-        .special-item .cut {
+        .special-item .cut{
             text-decoration: line-through;
         }
 
@@ -81,10 +81,7 @@
 
         .button>a {
             color: white;
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-top: 14px;
-            padding-bottom: 14px;
+            padding: 10px;
             font-size: 12px;
             font-weight: bold;
             text-decoration: none;
@@ -100,55 +97,45 @@
 </head>
 
 <body>
-    <!-- .........................header cont start........................... -->
-    <div id="header-cont">
-        <div id="top-cont">
-            <div id="strawberry-cont">
-              <a href="home01.html"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png" /></a>
-            </div>
-            <div id="search-cont">
-              <input type="text" placeholder="SEARCH BRAND/PRODUCTS" /><button>Search</button>
-            </div>
-            <div id="right-cont">
-              <a href="cart.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-fill"
-                  viewBox="0 0 18 18">
-                  <path
-                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
+    <!-- .........................header cont start............................ -->
+    <div id="top-cont">
+        <div id="strawberry-cont"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png" /></div>
+        <div id="search-cont"><input type="text" placeholder="SEARCH BRAND/PRODUCTS"/><button>Search</button>
+        </div>
+        <div id="right-cont">
+
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 18 18">
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
                 </svg>Bag</a>
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill"
-                  viewBox="0 0 18 18">
-                  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-                </svg>Wishlist</a>
-              <a href="#" id="myBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle"
-                  viewBox="0 0 18 18">
-                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                  <path fill-rule="evenodd"
-                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                </svg>Login</a>
-            </div>
-          </div>
-        <!-- ...........................header cont ends.............................. -->
-        <!-- ...........................menu cont starts............................ -->
-        <div class="menu-cont">
-            <div class="button btn-hover">
-                <a href="#" title="SHOP BY BRAND">SHOP BY BRAND</a>
-                <a href="#" title="SKINCARE">SKINCARE</a>
-                <a href="#" title="MAKEUP">MAKEUP</a>
-                <a href="#" title="HAIRCARE">HAIRCARE</a>
-                <a href="#" title="PERFUME">PERFUME</a>
-                <a href="#" title="MEN'S SKINCARE">MEN'S SKINCARE</a>
-                <a href="#" title="MEN'S COLOGNE">MEN'S COLOGNE</a>
-                <a href="#" title="HOME SCENTS">HOME SCENTS</a>
-                <a href="#" title="NATURAL BEAUTY">NATURAL BEAUTY</a>
-                <a href="#" title="SPECIAL">SPECIAL</a>
-                <a href="#" title="★NEW">★NEW</a>
-            </div>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 18 18">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+              </svg>Wishlist</a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 18 18">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>Login</a>
         </div>
     </div>
-    
+    <!-- ...........................header cont ends.............................. -->
+    <!-- ...........................menu cont starts............................ -->
+    <div class="menu-cont">
+        <div class="button btn-hover">
+            <a href="#" title="SHOP BY BRAND">SHOP BY BRAND</a>
+            <a href="#" title="SKINCARE">SKINCARE</a>
+            <a href="#" title="MAKEUP">MAKEUP</a>
+            <a href="#" title="HAIRCARE">HAIRCARE</a>
+            <a href="#" title="PERFUME">PERFUME</a>
+            <a href="#" title="MEN'S SKINCARE">MEN'S SKINCARE</a>
+            <a href="#" title="MEN'S COLOGNE">MEN'S COLOGNE</a>
+            <a href="#" title="HOME SCENTS">HOME SCENTS</a>
+            <a href="#" title="NATURAL BEAUTY">NATURAL BEAUTY</a>
+            <a href="#" title="SPECIAL">SPECIAL</a>
+            <a href="#" title="★NEW">★NEW</a>
+        </div>
+    </div>
     <!-- .......................menu cont ends........................... -->
 </body>
 </html>
