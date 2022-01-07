@@ -31,9 +31,9 @@ var data = [
 
 data.forEach((item) => {
 
-const itemData = item;
-  
-const html = `<div>
+  const itemData = item;
+
+  const html = `<div>
           <a onclick="wishlist('${item.name}', '${item.image}', '${item.price}', '${item.description}')"href="#"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +70,8 @@ const html = `<div>
           </div>
         </div>`;
 
-const specialItem = document.getElementsByClassName('special-item')[0];
-specialItem.insertAdjacentHTML('beforeend', html);
+  const specialItem = document.getElementsByClassName('special-item')[0];
+  specialItem.insertAdjacentHTML('beforeend', html);
 
 })
 
@@ -87,18 +87,18 @@ function addToCart(name, image, price, description) {
   } else {
     cartData = [];
   }
- 
 
 
- // push the itemData object in parsedData
+
+  // push the itemData object in parsedData
   cartData.push(itemData);
-  
-  
-const itemData_json = JSON.stringify(cartData);
+
+
+  const itemData_json = JSON.stringify(cartData);
   localStorage.setItem("items", itemData_json)
   // console.log(itemData)
 }
-  
+
 
 const data_json = JSON.stringify(data);
 localStorage.setItem("data", data_json);
@@ -106,8 +106,8 @@ localStorage.setItem("data", data_json);
 function wishlist(name, image, price, description) {
 
 
-  
-   const wishlist_item = { name, image, price, description };
+
+  const wishlist_item = { name, image, price, description };
 
   // fetch local storage data 
   let wishlistData = localStorage.getItem("wish");
@@ -117,13 +117,13 @@ function wishlist(name, image, price, description) {
   } else {
     wishlistData = [];
   }
- 
 
 
- // push the itemData object in parsedData
+
+  // push the itemData object in parsedData
   wishlistData.push(wishlist_item);
-  
-  
+
+
   const wishlistData_json = JSON.stringify(wishlistData);
   localStorage.setItem("wish", wishlistData_json)
 }
